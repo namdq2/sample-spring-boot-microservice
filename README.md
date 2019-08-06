@@ -25,12 +25,11 @@
 # Sử dụng
 - Chạy lần lượt Eureka Server, các service image, gallery, auth và gateway.
 - POST: localhost:8762/auth để lấy token
-> {
->    "username": "admin",
->    "password": "12345"
-> }
+
 ![alt text](https://res.cloudinary.com/deop9ytsv/image/upload/v1545237441/msa_jwt_img1.jpg)
+
 - GET: localhost:8762/gallery/1 kèm theo token
+
 ![alt text](https://res.cloudinary.com/deop9ytsv/image/upload/v1545237474/Screenshot_2.jpg)
 
 Nguồn: tubean
