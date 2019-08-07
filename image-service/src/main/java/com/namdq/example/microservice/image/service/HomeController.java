@@ -1,5 +1,6 @@
 package com.namdq.example.microservice.image.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
+@Slf4j
 public class HomeController {
 
     @Autowired
@@ -22,6 +24,8 @@ public class HomeController {
 
     @RequestMapping("/images")
     public List<Image> getImages() throws Exception {
+        log.info("Creating a image list... ");
+
         List<Image> images = Arrays.asList(
                 new Image(1, "Treehouse of Horror V", "https://www.imdb.com/title/tt0096697/mediaviewer/rm3842005760"),
                 new Image(2, "The Town", "https://www.imdb.com/title/tt0096697/mediaviewer/rm3698134272"),
@@ -29,11 +33,12 @@ public class HomeController {
         );
 
 //        create demo error
-        try {
-            throw new Exception("Images can't be fetched");
-        } catch (Exception e) {
-            throw e;
-        }
-//        return images;
+//        try {
+//            throw new Exception("Images can't be fetched");
+//        } catch (Exception e) {
+//            throw e;
+//        }
+        log.info("Returning images...");
+        return images;
     }
 }
