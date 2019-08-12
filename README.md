@@ -1,5 +1,3 @@
-# microservice-springboot-jwt-example
-
 # Kiến trúc tổng quan
 ![alt text](https://res.cloudinary.com/deop9ytsv/image/upload/v1545143589/1_Z8HUa8vdvIrF68crSJOPTQ.png)
 
